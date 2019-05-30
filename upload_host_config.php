@@ -18,6 +18,6 @@
 			echo "Hubo un error en la ejecucion.";
 		}
 		fclose($archivo);
-		header('Location: main_config.php');
+		header('Location: create_tables.php');
 	}
 ?>
