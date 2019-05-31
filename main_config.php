@@ -37,9 +37,21 @@
 			<input type="text" name="lema">
 			<label for="escudo">Coloque el escudo de su institucion.:</label>
 			<input type="file" name="escudo">
+			<h3>Colores</h3>
+			<label>Coloque la dirección de la institucion:</label>
+			<input type="text" name="direccion">
+			<label>Coloque el email de contacto de la institucion: </label>
+			<input type="email" name="email_ins">
+			<label>Coloque el telefono de la institucion: </label>
+			<input type="text" name="telefono_ins">
 			<hr>
 			<h2>Datos administrador:</h2>
-			<label>Coloque la id del administrador:</label>
+			<label>Tipo de documento:</label>
+			<select name="tipo_documento">
+				<option value="Cedula">Cedula de ciudadania</option>
+				<option value="TI">Tarjeta de identidad</option>
+			</select><br><br>
+			<label>Coloque el documento del administrador:</label>
 			<input type="text" name="id">
 			<label>Coloque nombres del administrador:</label>
 			<input type="text" name="nombres_admin">
