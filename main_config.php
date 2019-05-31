@@ -39,24 +39,42 @@
 			<input type="file" name="escudo">
 			<hr>
 			<h2>Datos administrador:</h2>
-			<label for="id">Coloque la id del administrador:</label>
+			<label>Coloque la id del administrador:</label>
 			<input type="text" name="id">
-			<label for="nombres_admin">Coloque nombres del administrador:</label>
+			<label>Coloque nombres del administrador:</label>
 			<input type="text" name="nombres_admin">
 			<label>	Coloque apellidos del administrador:</label>
 			<input type="text" name="apellidos_admin">
-			<label for="nombres_admin">Coloque email del administrador:</label>
+			<label>Coloque email del administrador:</label>
 			<input type="email" name="nombres_admin">
-			<label for="nombres_admin">Coloque contraseña del administrador:</label>
-			<input type="password" name="pass_admin">
-			<label for="nombres_admin">Confirme contraseña del administrador:</label>
-			<input type="password" name="pass_admin_2">
-			<label for="nombres_admin">Coloque fecha de nacimiento del administrador:</label>
+			<label>Coloque contraseña del administrador:</label>
+			<input type="password" name="pass_admin" id="pass">
+			<label>Confirme contraseña del administrador:</label>
+			<input type="password" name="pass_admin_2" id="pass_2" onfocusout="myFunction()">
+			<span id="span"></span>
+			<br><br><br>
+			<label>Direccion:</label>
+			<input type="text" name="direccion_admin" >
+			<label>Coloque fecha de nacimiento del administrador:</label>
 			<input type="date" name="date_admin">
-			<label for="foto_admin">Coloque foto del administrador.:</label>
+			<label>Coloque foto del administrador.:</label>
 			<input type="file" name="foto_admin">
 			</form>
 		</div>
 	</div>
+<script>
+	var span = document.getElementById('span');
+	var pass = document.getElementById('pass');
+	var pass_2 = document.getElementById('pass_2');
+	function myFunction(){
+		if (pass.value == pass_2.value) {
+			span.style.color = 'green';
+			span.innerHTML = 'Correcto';
+		}else{
+			span.style.color = 'red';
+			span.innerHTML = 'No coinciden las contraseñas';
+		}
+	}	
+</script>
 </body>
 </html>

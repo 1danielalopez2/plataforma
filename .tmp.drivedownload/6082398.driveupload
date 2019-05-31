@@ -17,4 +17,6 @@ CREATE TABLE calificaciones(id int, curso int, estudiante int, documento_estudia
 ");
 $stm -> execute();
 if ($stm) {
-	h
+	header('Location: main_config.php');
+}
+ ?>
