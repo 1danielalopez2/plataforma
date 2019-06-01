@@ -37,7 +37,47 @@
 			<input type="text" name="lema">
 			<label for="escudo">Coloque el escudo de su institucion.:</label>
 			<input type="file" name="escudo">
-			<h3>Colores</h3>
+			<h3 id="text">Colores</h3>
+			<select name="color1" id="color1">
+				<option value="0">Seleccione un color</option>
+				<option value="1" style="background-color: #2c2c54" onclick="color()"></option>
+				<option value="2" style="background-color: #474787" onclick="color()"></option>
+				<option value="3" style="background-color: #aaa69d" onclick="color()"></option>
+				<option value="4" style="background-color: #227093" onclick="color()"></option>
+				<option value="5" style="background-color: #218c74" onclick="color()"></option>
+				<option value="6" style="background-color: #b33939" onclick="color()"></option>
+				<option value="7" style="background-color: #cd6133" onclick="color()"></option>
+				<option value="8" style="background-color: #84817a" onclick="color()"></option>
+				<option value="9" style="background-color: #cc8e35" onclick="color()"></option>
+				<option value="10" style="background-color: #ccae62" onclick="color()"></option>
+			</select>
+			<select name="color2" id="color2">
+				<option value="0">Seleccione un color</option>
+				<option value="1" style="background-color: #2c2c54" onclick="colord()"></option>
+				<option value="2" style="background-color: #474787" onclick="colord()"></option>
+				<option value="3" style="background-color: #aaa69d" onclick="colord()"></option>
+				<option value="4" style="background-color: #227093" onclick="colord()"></option>
+				<option value="5" style="background-color: #218c74" onclick="colord()"></option>
+				<option value="6" style="background-color: #b33939" onclick="colord()"></option>
+				<option value="7" style="background-color: #cd6133" onclick="colord()"></option>
+				<option value="8" style="background-color: #84817a" onclick="colord()"></option>
+				<option value="9" style="background-color: #cc8e35" onclick="colord()"></option>
+				<option value="10" style="background-color: #ccae62" onclick="colord()"></option>
+			</select>
+			<select name="color3" id="color3">
+				<option value="0">Seleccione un color</option>
+				<option value="1" style="background-color: #40407a" onclick="colort()"></option>
+				<option value="2" style="background-color: #706fd3" onclick="colort()"></option>
+				<option value="3" style="background-color: #f7f1e3" onclick="colort()"></option>
+				<option value="4" style="background-color: #34ace0" onclick="colort()"></option>
+				<option value="5" style="background-color: #33d9b2" onclick="colort()"></option>
+				<option value="6" style="background-color: #ff5252" onclick="colort()"></option>
+				<option value="7" style="background-color: #ff793f" onclick="colort()"></option>
+				<option value="8" style="background-color: #d1ccc0" onclick="colort()"></option>
+				<option value="9" style="background-color: #ffb142" onclick="colort()"></option>
+				<option value="10" style="background-color: #ffda79" onclick="colort()"></option>
+			</select><br><br>
+			<br><br>
 			<label>Coloque la dirección de la institucion:</label>
 			<input type="text" name="direccion">
 			<label>Coloque el email de contacto de la institucion: </label>
@@ -88,5 +128,6 @@
 		}
 	}	
 </script>
+<script src="color.js"></script>
 </body>
 </html>
