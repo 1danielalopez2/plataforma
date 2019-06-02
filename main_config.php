@@ -24,11 +24,14 @@
 		padding: 10px;
 		box-sizing: border-box;
 	}
+	img{
+		width: 200px;
+	}
 </style>
 <body>
 	<div class="contenedor">
 		<div class="formulario" style="width: 100%;">
-			<form action="">
+			<form action="upload_main_config.php" method="POST" enctype="multipart/form-data">
 			<h1>Datos institucion</h1>
 			<h2>Datos basicos:</h2>
 			<label for="nombre">Nombre de la institucion:</label>
@@ -36,7 +39,10 @@
 			<label for="lema">Coloque una descripcion para su institucion o el PEI:</label>
 			<input type="text" name="lema">
 			<label for="escudo">Coloque el escudo de su institucion.:</label>
-			<input type="file" name="escudo">
+			<input type="file" name="escudo" id="escudo">
+			<div id="imagePreview">
+		
+			</div>
 			<h3 id="text">Colores</h3>
 			<select name="color1" id="color1">
 				<option value="0">Seleccione un color</option>
@@ -88,7 +94,7 @@
 			<h2>Datos administrador:</h2>
 			<label>Tipo de documento:</label>
 			<select name="tipo_documento">
-				<option value="Cedula">Cedula de ciudadania</option>
+				<option value="CC">Cedula de ciudadania</option>
 				<option value="TI">Tarjeta de identidad</option>
 			</select><br><br>
 			<label>Coloque el documento del administrador:</label>
@@ -98,7 +104,7 @@
 			<label>	Coloque apellidos del administrador:</label>
 			<input type="text" name="apellidos_admin">
 			<label>Coloque email del administrador:</label>
-			<input type="email" name="nombres_admin">
+			<input type="email" name="email_admin">
 			<label>Coloque contraseña del administrador:</label>
 			<input type="password" name="pass_admin" id="pass">
 			<label>Confirme contraseña del administrador:</label>
@@ -107,13 +113,20 @@
 			<br><br><br>
 			<label>Direccion:</label>
 			<input type="text" name="direccion_admin" >
+			<label>Telefono:</label>
+			<input type="text" name="telefono_admin" >
 			<label>Coloque fecha de nacimiento del administrador:</label>
 			<input type="date" name="date_admin">
 			<label>Coloque foto del administrador.:</label>
-			<input type="file" name="foto_admin">
+			<input type="file" name="foto_admin" id="foto_admin">
+			<div id="imagePreview2">
+		
+			</div>
+			<input type="submit" class="button-submit-green">
 			</form>
 		</div>
 	</div>
+
 <script>
 	var span = document.getElementById('span');
 	var pass = document.getElementById('pass');
@@ -128,6 +141,8 @@
 		}
 	}	
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="escudo.js"></script>
 <script src="color.js"></script>
 </body>
 </html>

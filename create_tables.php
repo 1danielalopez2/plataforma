@@ -14,6 +14,7 @@ CREATE TABLE cursos(id int AUTO_INCREMENT, nombre varchar(255), materia int, gra
 CREATE TABLE relprofesorcursos(id int, profesor int, cursos int, PRIMARY KEY(id), FOREIGN KEY(profesor) REFERENCES usuario(id), FOREIGN KEY(cursos) REFERENCES cursos(id));
 CREATE TABLE relestudiantesalon(id int AUTO_INCREMENT, estudiante int, salon int, PRIMARY KEY(id), FOREIGN KEY(estudiante) REFERENCES usuario(id), FOREIGN KEY (salon) REFERENCES salon(id));
 CREATE TABLE calificaciones(id int, curso int, estudiante int, documento_estudiante int, nota1 int, nota2 int, PRIMARY KEY(id), FOREIGN KEY(estudiante) REFERENCES usuario(id), FOREIGN KEY(curso) REFERENCES cursos(id));
+CREATE TABLE datos_institucion(id int AUTO_INCREMENT, escudo longblob, nombre varchar(255), color1 varchar(255), color2 varchar(255), color3 varchar(255), descripcion longtext, email varchar(255), telefono int, PRIMARY KEY(id));
 ");
 $stm -> execute();
 if ($stm) {
