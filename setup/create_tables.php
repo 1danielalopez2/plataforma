@@ -1,7 +1,7 @@
 <?php 
-echo "Si ve esto, porfavor de click <a href='delete/index.php'>aqui</a> y coloque de nuevo los datos. Debe haber algun dato erroneo";
+echo "Si ve esto, porfavor de click <a href='../delete/index.php'>aqui</a> y coloque de nuevo los datos. Debe haber algun dato erroneo";
 echo "<br><br><br><br>";
-include 'conexion.php';
+include '../conexion.php';
 $stm = $conexion->prepare("
 USE saoisoft;
 CREATE TABLE tipo_usuario(id int, nombre varchar(255), PRIMARY KEY(id));

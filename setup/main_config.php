@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Configuracion inicial</title>
-	<link rel="stylesheet" href="styles/config.css">
-	<link rel="stylesheet" href="styles/botones.css">
-	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="../styles/config.css">
+	<link rel="stylesheet" href="../styles/botones.css">
+	<link rel="stylesheet" href="../styles/main.css">
 </head>
 <style>
 	body{

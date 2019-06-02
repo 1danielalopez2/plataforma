@@ -5,7 +5,7 @@
 	$password = $_POST['password'];
 	$database = $_POST['database'];
 
-	$file = 'conexion.php';
+	$file = '../conexion.php';
 	if ($archivo = fopen($file, "a")) {
 		$mensaje = "<?php 
 		"."$"."conexion=new PDO('mysql:host=".$host.";dbname=".$database."','".$username."','".$password."');

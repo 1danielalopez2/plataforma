@@ -1,6 +1,6 @@
 <?php 
 
-include 'conexion.php';
+include '../conexion.php';
 
 //Datos institucion
 $nombre = $_POST['nombre'];
@@ -24,7 +24,21 @@ $direccion_admin = $_POST['direccion_admin'];
 $telefono_admin = $_POST['telefono_admin'];
 $date_admin = $_POST['date_admin'];
 $cargarFoto = ($_FILES['foto_admin']['tmp_name']);
-$foto_admin = fopen($cargarEscudo,'rb');
+
+$folder = "../usuarios";
+
+mkdir($folder);
+
+$folder2 = $folder . "/" . $id;
+mkdir($folder2);
+
+$nombre_imagen = $_FILES['foto_admin']['name'];
+$tipo_imagen= $_FILES['foto_admin']['type'];
+$tamano_imagen = $_FILES['foto_admin']['size'];
+
+$carpeta_destino =$folder2;
+move_uploaded_file($_FILES['foto_admin']['tmp_name'], $carpeta_destino."/".$id.".jpg");
+$foto_admin = "usuarios/".$id.".jpg";
 
 include 'colortable.php';
 
@@ -34,6 +48,8 @@ $sq->execute();
 $sq2 = $conexion->prepare("INSERT INTO tipo_usuario(nombre) VALUES('administrador')");
 $sq2 -> execute();
 
-$sq3 = $conexion->prepare("INSERT INTO usuario(id, nombres, apellidos, email, tipo_usuario, pass, lugar_nacimiento, fecha_nacimiento, direccion, telefono, foto, tipo_documento) VALUES('$id','$nombres_admin','$apellidos_admin', '$email_admin',1, '$pass_admin', '', '$date_admin', '$direccion_admin', '$telefono_admin', '$foto_admin', '$tipo_documento')");
+$sq3 = $conexion->prepare("INSERT INTO usuario(id, nombres, apellidos, email, tipo_usuario, pass, lugar_nacimiento, fecha_nacimiento, direccion, telefono, foto, tipo_documento) VALUES('$id','$nombres_admin','$apellidos_admin', '$email_admin',0, '$pass_admin', 'asd', '$date_admin', '$direccion_admin', '$telefono_admin', '$foto_admin', '$tipo_documento')");
 $sq3 -> execute();
+
+header('Location: ../');
  ?>
