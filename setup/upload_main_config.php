@@ -6,7 +6,7 @@ include '../conexion.php';
 $nombre = $_POST['nombre'];
 $lema = $_POST['lema'];
 $cargarEscudo = ($_FILES['escudo']['tmp_name']);
-$escudo = fopen($cargarEscudo,'rb');
+$escudo = addslashes(file_get_contents($cargarEscudo));
 $color1 = $_POST['color1'];
 $color2 = $_POST['color2'];
 $color3 = $_POST['color3'];

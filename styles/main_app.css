@@ -1,0 +1,174 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.header{
+	width: 100%;
+	height: 42px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo img{
+	height: 42px;
+}
+
+.busqueda{
+	width: 100%;
+	display: flex;
+	height: 30px;
+}
+
+.busqueda input[type=text]{
+	width: 80%;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.busqueda input[type=submit]{
+	width: 42px;
+	padding: 5px;
+	box-sizing: border-box;
+	border: none;
+	background-color: #ffffff;
+	cursor: pointer;
+}
+
+.header button{
+	border: none;
+	padding: 10px;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.espacio{
+	color: transparent;
+}
+
+.header button:hover{
+	background-color: #00000038;
+}
+
+.body{
+	width: 100%;
+	display: flex;
+}
+
+.aside{
+	width: 20%;
+	/*height: 1000px;*/
+	/*background-color: #227093;*/
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.aside button{
+	border: none;
+	width: 100%;
+	background-color: transparent;
+	color: #ffffff;
+	text-align: left;
+	padding: 5px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.aside button:hover{background-color: #ffffff54}
+
+.aside hr{
+	/*color: #FF0000;*/
+	margin-top: 10px;
+}
+
+.aside h4{
+	color: #ffffff;
+	font-weight: bold;
+	margin-top: 15px;
+}
+
+.aside p{
+	color: #ffffff;
+}
+
+.main{
+	padding: 40px;
+	box-sizing: border-box;
+	width: 80%;
+}
+
+.main li{
+	margin-left: 40px;
+}
+
+.izq{
+	display: flex;
+	flex-direction: row;
+	width: 40%;
+	align-items: center;
+}
+
+.menu{
+	width: 200px;
+	border: 1px solid #000000;
+	position:fixed;
+	top: 42px;
+	right: 0;
+	background-color: #ffffff;
+	padding: 5px;
+	box-sizing: border-box;
+	display: none;
+}
+
+.menu button{
+	border: none;
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	border: none;
+	width: 100%;
+	background-color: transparent;
+	text-align: left;
+	padding: 5px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.menu button:hover{
+	background-color: #00000038;
+}
+
+#menu_btn2{
+	display: none;
+}
+
+@media (max-width: 740px) {
+	.header{
+		flex-direction: column;
+		height: 84px;
+	}
+	.izq{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.menu{
+		top: 84px;
+	}
+	.busqueda input[type="text"]{
+		width: 90%;
+	}
+}
+
+@media (max-width: 450px) {
+	.header{
+		height: 126px;
+	}
+	.menu{
+		top: 126px;
+	}
+}

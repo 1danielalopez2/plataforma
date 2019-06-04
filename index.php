@@ -7,6 +7,9 @@ if(isset($conexion)){
 }else{
 	header('Location: setup/');
 }
+$st = $conexion -> prepare("SELECT * FROM datos_institucion");
+$st -> execute();
+$fila = $st -> fetch();
 
  ?>
 
@@ -20,17 +23,17 @@ if(isset($conexion)){
  	<link rel="image/x-icon" href="Finallogo.png">
  </head>
  <style>
- 	body{
- 		background-image: 
- 	}
+ 	 .header{
+	 	background-color: <?php echo $fila['color1'] ?>;
+	 }
  </style>
  <body>
  	<form action="#" method="POST">
  	<div class="contenedor">
  		<div class="header">
  			<div class="logo">
- 				<img src="http://www.domingosaviobilingualschool.edu.co/wordpress/wp-content/uploads/2019/03/LOGO-SOLO.png">
- 				<div class="nombre">Domingo Savio Bilingual School</div>
+ 				<img src="data:image/jpg;base64,<?php echo base64_encode($fila['escudo']); ?>">
+ 				<div class="nombre"><?php echo $fila['nombre']; ?></div>
  			</div>
  			<div class="login">
  					<div class="username">Usuario:<input type="text" name="username"></div>
